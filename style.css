@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #DADBD5;
+  overflow: hidden;
+}
+.clear {
+  clear: both;
+  //serve per gli elementi float
+}
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 18%;
+  background: #009688;
+  z-index: -1;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  width: 100%;
+  height: 100%;
+}
+.content_container {
+  width: 90%;
+  height: 90%;
+  background: white;
+  box-shadow: 0 0 15px #333333;
+}
+.top {
+  width: 100%;
+  height: 70px;
+  background: #EEEEEE;
+}
+.bottom {
+  width: 100%;
+  height: calc(100% - 70px);
+}
+.bottom_left, .bottom_right {
+  float: left;
+  height: 100%;
+}
+.bottom_left {
+  width: 30%;
+}
+.bottom_right {
+  width: 70%;
+}
+.messages_container {
+  padding: 50px;
+  width: 100%;
+  height: calc(100% - 70px);
+  background-image: url("https://raw.githubusercontent.com/michelepapagni/boolzapp-milestone-1/master/mine.jpg");
+}
+.message {
+  position: relative;
+  margin:5px 0;
+  min-width: 20%;
+  max-width: 60%;
+  padding: 10px;
+  background: white;
+  border-radius: 10px;
+}
+.message.received {
+  background: white;
+}
+.message.sent {
+  float: right;
+  background: #DCF8C6;
+}
+.message > span {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 10px;
+  color: #D2D3D3;
+}
+.new_message_container {
+  width: 100%;
+  height: 70px;
+  background: #EFEFEF;
+}
+.new_message_container .input, .new_message_container .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  height: 100%;
+}
+.new_message_container .input {
+  padding: 10px 20px;
+  width: 84%;
+}
+.new_message_container .input input {
+  padding: 0 20px;
+  width: 100%;
+  height: 100%;
+  color: #595959;
+  font-size: 16px;
+  border: 0;
+  border-radius: 30px;
+}
+.new_message_container .input input::placeholder {
+  color: #D1D1D1;
+}
+.new_message_container .icon {
+  width: 8%;
+  color: #949A9C;
+  font-size: 25px;
+  background: #EFEFEF;
+}
+.notification {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 90px;
+  width: 100%;
+  background: #9DE1FE;
+}
+.notification_bell {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin-right: 20px;
+  border-radius: 100%;
+  font-size: 18px;
+  color: #9DE1FE;
+  background: #F5FCFF;
+}
+.notification_text h3 {
+  font-size: 16px;
+  font-weight: 400;
+}
+.notification_text a {
+  color: #445D69;
+  font-size: 14px;
+}
+.filter_contacts {
+  width: 100%;
+  height: 50px;
+  padding: 5px;
+  background: #EFEFEF;
+}
+.filter_contacts label {
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  height: 100%;
+  background: white;
+  border-radius: 10px 0 0 10px;
+  color: #D1D1D1;
+}
+.filter_contacts input {
+  width: 85%;
+  height: 100%;
+  padding: 0 10px;
+  border-radius: 0 10px 10px 0;
+  border: 0;
+}
+.filter_contacts input::placeholder {
+  color: #D1D1D1;
+}
+.contacts_container {
+  overflow-y: auto;
+  width: 100%;
+  height: calc(100% - 140px);
+}
+.contacts_container .contact {
+  height: 70px;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid #F5F5F5;
+  cursor: pointer;
+}
+.contact_image, .contact_text {
+  display: flex;
+  align-items: center;
+  float: left;
+  height: 100%;
+}
+.contact_image {
+  justify-content: center;
+  width: 20%;
+}
+.contact_image img {
+  height: 60px;
+  border-radius: 100%;
+}
+.contact_text {
+  width: 80%;
+}
+.contact_text > div {
+  position: relative;
+  width: 100%;
+}
+.contact_text > div > span {
+  display: block;
+  color: lightgrey;
+  margin: 5px 10px;
+}
+.contact_text > div > span.contact_name {
+  color: gray;
+}
+.contact_text > div > span.contact_time {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  font-size: 12px;
+}
